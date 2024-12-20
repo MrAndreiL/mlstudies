@@ -1,8 +1,29 @@
 def stepTransfer(activation: float) -> int:
+    """
+    Applies linear step function transfer.
+
+    Input:
+        activation: float value representing activation
+    of a linear equation.
+
+    Returns:
+        Step function boolean result.
+    """
     return 1 if activation >= 0.0 else 0
 
 
 def predict(inputs, weights, bias):
+    """
+    Computes linear equation and returns prediction result.
+
+    Input:
+        inputs:  perceptron input values.
+        weights: corresponding weights for each input value.
+        bias:    linear equation free term.
+
+    Returns:
+        Perceptron boolean prediction value.
+    """
     linEq = 0.0
     for i in range(len(inputs)):
         linEq += (weights[i] * inputs[i])
@@ -23,6 +44,8 @@ dataset = [[2.7810836, 2.550537003, 0],
            [8.675418651, -0.242068655, 1],
            [7.673756466, 3.508563011, 1]]
 
+
+# Set up ideal weights and bias values.
 bias = -0.1
 weights = [0.20653640140000007, -0.23418117710000003]
 
